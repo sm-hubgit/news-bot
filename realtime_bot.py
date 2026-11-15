@@ -6,7 +6,7 @@
   إذا خلصت الحصة المجانية، يرجع تلقائياً للطريقة الأولى.
 
 المتغيرات: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
-اختياري:   GEMINI_API_KEY, REALTIME_MODEL (الافتراضي gemini-2.5-flash-lite), DRY_RUN=1
+اختياري:   GEMINI_API_KEY, REALTIME_MODEL (الافتراضي gemini-flash-lite-latest), DRY_RUN=1
 """
 
 import html
@@ -22,7 +22,7 @@ from common import (
 from sources import EXTRA_INSTRUCTIONS
 
 STATE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "state.json")
-MODEL = os.environ.get("REALTIME_MODEL", "gemini-2.5-flash-lite")
+MODEL = os.environ.get("REALTIME_MODEL", "gemini-flash-lite-latest")
 MAX_AGE_HOURS = 3
 KEEP_SEEN_DAYS = 3
 KEEP_RECENT_SENT = 200
