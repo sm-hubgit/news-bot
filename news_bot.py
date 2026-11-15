@@ -5,7 +5,7 @@
 - ويا GEMINI_API_KEY: ملخص مكتوب بكل قسم + فكرة اليوم.
 
 المتغيرات: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
-اختياري:   GEMINI_API_KEY, DAILY_MODEL (الافتراضي gemini-2.5-flash), DRY_RUN=1
+اختياري:   GEMINI_API_KEY, DAILY_MODEL (الافتراضي gemini-flash-latest), DRY_RUN=1
 """
 
 import html
@@ -19,7 +19,7 @@ from common import (
 )
 from sources import EXTRA_INSTRUCTIONS
 
-MODEL = os.environ.get("DAILY_MODEL", "gemini-2.5-flash")
+MODEL = os.environ.get("DAILY_MODEL", "gemini-flash-latest")
 PER_SECTION = 7
 
 SECTIONS = [
